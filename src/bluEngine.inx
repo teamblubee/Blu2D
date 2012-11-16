@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+	<_name>bluEngine - objectExporter</_name>
+	<id>com.blubee.bluEngine.objectEditor</id>
+	
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="extensions">bluEngine.py</dependency>
+	
+	<param name="mode" type="enum" gui-text="Choose XML or JSON">
+    <item value="xml">output blu2DX(ML)</item>
+    <item value="json">output blu2DJ(SON)</item>
+  	</param>
+	
+	<output>
+		<extension>.blu2DX</extension>
+		<mimetype>text/xml</mimetype>
+		<_filetypename>2D game data for BluEngine Games (*.blu2DX)</_filetypename>
+		<_filetypetooltip>Saves out custom XML formatted game data</_filetypetooltip>
+		<dataloss>false</dataloss>
+	</output>
+	
+	<script>
+		<command reldir="extensions" interpreter="python">bluEngine.py</command>
+	</script>
+	</inkscape-extension>
